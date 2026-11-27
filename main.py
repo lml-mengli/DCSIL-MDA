@@ -14,7 +14,7 @@ from model import DCSILGNN
 from utils_ import *
 import os
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 def set_seed(seed):
     torch.manual_seed(seed)
     random.seed(seed)
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     data['drug'].x = torch.tensor(d_sim,dtype=torch.float32)
     data['micro','cause','drug'].edge_index = edge_index
     data['micro','cause','drug'].edge_arrt = edge_attr
-    data = ToUndirected()(data) #PyG 自动帮你加了一条反向边
+    data = ToUndirected()(data)
     print(data)
 
 
