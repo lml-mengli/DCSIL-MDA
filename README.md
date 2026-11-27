@@ -21,6 +21,6 @@ experiments were conducted on three publicly available datasets, including MDAD[
 
 
 ## Training and Evaluation
-To run the model with 10-fold cross-validation, execute: python main1-10CV.py
+To run the model, execute: python main.py
 
 
