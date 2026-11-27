@@ -95,14 +95,11 @@ if __name__ == '__main__':
         )
 
     train_data, val_data, test_data = transform(data)
-    print(train_data)
-    print(val_data)
-    print(test_data)
 
     data = data.to(device)
     train_data = train_data.to(device)
-    test_data = test_data.to(device)
     val_data = val_data.to(device)
+    test_data = test_data.to(device)
 
     np.random.seed(args.seed)
 
