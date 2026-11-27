@@ -440,13 +440,13 @@ def calculate_evaluation_metrics(pred_mat, pos_edges, neg_edges):
 
 def parameters_set():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
+    parser.add_argument('--lr', type=float, default=0.0001, help='learning rate')
     parser.add_argument('--seed', type=int, default=111, help='the random seeds')
     parser.add_argument('--num_epochs', type=int, default=500, help='number of training epochs')
     parser.add_argument('--dropout', type=float, default=0.05, help="dropout rate")
     parser.add_argument('--weight_decay', type=float, default=0.01, help="weight decay")
     parser.add_argument('--loss_gamma', type=float, default=0.7, help="balance coefficient")
-    parser.add_argument('--hidden_size', type=int, default=128, help='model hidden dim')
+    parser.add_argument('--hidden_size', type=int, default=256, help='model hidden dim')
     parser.add_argument('--num_heads', type=int, default=1, help='number of heads of GAT')
     parser.add_argument('--patience', type=int, default=50, help='number of patience of early stopping mechanism')
     parser.add_argument('--kfold', type=int, default=10, help='model hidden dim')
